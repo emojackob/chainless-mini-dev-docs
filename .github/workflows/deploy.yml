@@ -26,19 +26,13 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Mintlify CLI
-        run: npm install -g mintlify
-
-      - name: Build documentation
-        run: mintlify build
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './.mintlify'
+          path: '.'
 
   deploy:
     environment:
